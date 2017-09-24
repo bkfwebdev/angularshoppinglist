@@ -1,0 +1,19 @@
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" src="w3css.css">
+</head>
+<h1>Angular Shopping List App</h1>
+<div ng-app="myShoppingList" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in products">
+                {{x}}
+                <span ng-click="removeItem($index)">&times;</span>
+            </li>
+        </ul>
+        <input ng-model="addMe">
+        <button class ="w3-btn" ng-click="addItem()">Add</button>
+        <p>{{errortext}}</p>
+    </div>
+<script src="shoppingListModule.js"></script>
+
+    
